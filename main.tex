@@ -1,0 +1,145 @@
+\documentclass[12pt, openright, a4paper, twoside, brazil]{abntex2}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{latexsym}
+\usepackage{amssymb,amsmath}
+\usepackage{setspace}
+\usepackage{fullpage}
+\usepackage{graphicx}
+\usepackage{systeme}
+\usepackage{geometry}
+\usepackage{wrapfig}
+\usepackage{mathtools}
+\usepackage{quoting}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{epigraph}
+\usepackage{enumitem}
+\usepackage{subfiles}
+\usepackage{fancyhdr}
+\usepackage[alf]{abntex2cite}
+\usepackage{lastpage}
+\usepackage{PPGEUFMG}
+\usepackage{caption}
+\usepackage[Rejne]{fncychap}%Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjor
+
+
+\rfoot{Página \thepage \hspace{1pt} de \pageref{LastPage}}
+\newcommand*\fontjov{{\fontfamily{qag}\selectfont}}
+
+\newcommand{\musica}[2]{\href{#1}{\fontfamily{qag}\selectfont\color{Mahogany} “#2”}}%, #3}, \citeindir{#4}}
+%% #1 - link pro youtube
+%% #2 - Trecho da música
+%% #3 - Nome da música
+%% #4 - Referência do Álbum/Single
+
+\newcommand{\citedirG}[3]{
+    \begin{quoting}[rightmargin=0cm,leftmargin=4cm]
+	    \noindent\footnotesize{{#1} (\citeauthor{#2}, \citeyear{#2}, #3).}
+    \end{quoting}
+}
+%% #1 - Trecho a ser citado
+%% #2 - Chave de referência da obra
+%% #3 - Página +  complementos, tradução/negritos..
+
+\newcommand{\citedirP}[3]{
+    “#1” (\citeauthor{#2}, \citeyear{#2}, #3)
+}
+%% #1 - Trecho a ser citado
+%% #2 - Chave de referência da obra
+%% #3 - Página +  complementos, tradução/negritos..
+
+\newcommand{\citeindir}[1]{(\citeauthor{#1}, \citeyear{#1})}
+%% #1 - Chave de referência da obra
+
+\titulo{Juventude e(m) Movimento: Uma terapia genealógica da BNCC}
+\autor{Gabriel Nogueira Malta}
+\local{Belo Horizonte}
+\data{2022}
+\orientador{Carolina Tamayo-Osório}
+%\coorientador{Equipe \abnTeX}
+\instituicao{%
+  Universidade Federal de Minas Gerais
+  \par
+  Faculdade de Educação
+  \par
+  Programa de Pós-Graduação em Educação: Conhecimento e Inclusão Social}
+\tipotrabalho{Dissertação (Mestrado)}
+\preambulo{Projeto de qualificação de Mestrado a ser apresentada ao
+Programa de Pós-Graduação em Educação: Conhecimento e Inclusão Social da Faculdade de Educação,
+Universidade Federal de Minas Gerais como
+requisito parcial ao título de mestre .\linebreak
+\newline
+\textbf{Área de concentração}: Educação \newline
+\textbf{Linha de Pesquisa}: Educação Matemática \newline
+\textbf{Orientadora}: Carolina Tamayo-Osório}
+
+
+\hypersetup{
+    pdftitle={\@title}, 
+	pdfauthor={\@author},
+    pdfsubject={\imprimirpreambulo},
+	pdfcreator={\@author},
+	pdfkeywords={{Hip-Hop}{Educação Matemática}{Currículo}}, 
+	colorlinks=true,       		
+	linkcolor=RoyalPurple,          	
+	citecolor=RoyalPurple,        		
+	filecolor=magenta,      		
+	urlcolor=blue,
+}
+
+%\fancypagestyle{prebodystyle}{
+%    \fancyhf{}
+%    \fancyfoot[C]{\textcolor{ForestGreen}{\thepage}}
+%    \renewcommand{\headrulewidth}{0pt}
+%    \pagenumbering{roman}
+%}
+
+\fancypagestyle{bodystyle}{
+  \fancyhf{}
+  \fancyfoot[C]{\thepage}%{\textcolor{ForestGreen}}
+  \renewcommand{\headrulewidth}{0pt}
+  \pagenumbering{arabic}
+}
+
+\begin{document}
+
+\imprimircapa
+\imprimirfolhaderosto
+
+%\pagestyle{prebodystyle}
+
+%\begin{fichacatalografica}
+%\includepdf{fig_ficha_catalografica.pdf}
+%\end{fichacatalografica}
+
+%\subfile{capitulos/ficha.tex}
+
+%\subfile{capitulos/errata.tex}
+
+%\begin{folhadeaprovacao}
+%\includepdf{folhadeaprovacao_final.pdf}
+%\end{folhadeaprovacao}
+
+%\subfile{capitulos/aprov.tex}
+
+%\subfile{capitulos/dedi.tex}
+
+%\subfile{capitulos/resumos.tex}
+
+%\subfile{capitulos/Listas.tex}
+
+\subfile{capitulos/sum.tex}
+	
+\pagestyle{bodystyle}
+
+\subfile{capitulos/cap1.tex}
+
+\subfile{capitulos/cap2.tex}
+
+\subfile{capitulos/cap3.tex}
+
+\citeoption{abnt-full-initials=yes}
+\bibliography{referencias}
+
+\end{document}
