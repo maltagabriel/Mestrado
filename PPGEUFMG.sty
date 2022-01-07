@@ -1,0 +1,105 @@
+%%
+%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com) para o Programa de Pós Graduação em Educação da UFMG
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%   http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2005/12/01 or later.
+%%
+%% This work has the LPPL maintenance status `maintained'.
+%% 
+%% The Current Maintainer of this work is Geraldo Pereira de Morais Júnior, geraldo.pmj@gmail.com
+%%
+%% Esse arquivo foi elaborado sobre o arquivo adaptado por Geraldo Pereira para o Programa de Pós Graduação Em Educação da UFMG
+%% para que atenda aos objetivos de escrita da dissertação de Gabriel Nogueira Malta, gabriel.malta@alumni.usp.br para o Programa
+%% de Pós Graduação em Educação: Conehcimento e Incusão Social da FaE/UFMG.
+%%
+%% Further information about abnTeX2 are available on https://github.com/abntex/abntex2
+%%
+
+% ---
+% INICIO DAS CUSTOMIZACOES PARA
+% Programa de Pós Graduação em Educação: Conhecimento e Inclusão Social da Faculdade de Educação da UFMG
+% ---
+
+\ProvidesPackage{PPGEUFMG}[2021-12-28 Criacao desta customizacao a partir da customizacao feita para o PPGAN da UFMG do abnTeX2]
+
+% alterando a capa
+\renewcommand{\imprimircapa}{%
+  \begin{capa}%
+    \center
+    \SingleSpacing
+    \ABNTEXchapterfont\Large UNIVERSIDADE FEDERAL DE MINAS GERAIS\linebreak FACULDADE DE EDUCAÇÃO\linebreak 
+PROGRAMA DE PÓS-GRADUAÇÃO EM EDUCAÇÃO: CONHECIMENTO E INCLUSÃO SOCIAL
+    
+    \vspace*{1cm}
+    
+    {\ABNTEXchapterfont\large\imprimirautor}
+
+    \vfill
+    \begin{center}
+    \ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo
+    \end{center}
+    \vfill
+    
+    \large\imprimirlocal
+
+    \large\imprimirdata
+    
+    \vspace*{1cm}
+  \end{capa}
+}
+
+
+% folha de rosto 
+
+\makeatletter
+
+\renewcommand{\folhaderostocontent}{
+\begin{center}
+\SingleSpacing
+\ABNTEXchapterfont\Large UNIVERSIDADE FEDERAL DE MINAS GERAIS\\FACULDADE DE EDUCAÇÃO\\
+PROGRAMA DE PÓS-GRADUAÇÃO EM EDUCAÇÃO: CONHECIMENTO E INCLUSÃO SOCIAL
+    
+    \vspace*{1cm}
+    
+{\ABNTEXchapterfont\large\imprimirautor}
+
+\vspace*{\fill}\vspace*{\fill}
+
+\begin{center}
+\ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+\end{center}
+
+\vspace*{\fill}
+
+\abntex@ifnotempty{\imprimirpreambulo}{%
+  \hspace{.45\textwidth}
+  \begin{minipage}{.5\textwidth}
+  \small
+  \SingleSpacing
+  \imprimirpreambulo 
+  \end{minipage}%
+  \vspace*{\fill}
+}%
+
+\vspace*{\fill}
+
+
+{\large\imprimirlocal}
+
+\par
+
+{\large\imprimirdata}
+\vspace*{1cm}
+\end{center}
+}
+
+\makeatother
+
+% ---
+% FIM DAS CUSTOMIZACOES
+% ---
