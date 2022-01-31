@@ -1,10 +1,11 @@
-\documentclass[12pt, openright, a4paper, twoside, brazil]{abntex2}
+\documentclass[12pt, openright, a4paper, oneside, brazil]{abntex2}
 \usepackage[brazil]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{latexsym}
 \usepackage{amssymb,amsmath}
-\usepackage{setspace}
+\usepackage{setspace}%para ter espaçamento simples
 \usepackage{fullpage}
+\usepackage{indentfirst}
 \usepackage{graphicx}
 \usepackage{systeme}
 \usepackage{geometry}
@@ -23,28 +24,30 @@
 \usepackage{caption}
 \usepackage[Rejne]{fncychap}%Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjor
 
-
 \rfoot{Página \thepage \hspace{1pt} de \pageref{LastPage}}
 \newcommand*\fontjov{{\fontfamily{qag}\selectfont}}
 
-\newcommand{\musica}[2]{\href{#1}{\fontfamily{qag}\selectfont\color{Mahogany} “#2”}}%, #3}, \citeindir{#4}}
+\newcommand{\musica}[3]{
+\begin{center}
+    \href{#1}{\fontfamily{qag}\selectfont\color{Mahogany} “#2”}\\
+    \citeindir{#3}
+\end{center}}
+
 %% #1 - link pro youtube
 %% #2 - Trecho da música
 %% #3 - Nome da música
 %% #4 - Referência do Álbum/Single
 
 \newcommand{\citedirG}[3]{
-    \begin{quoting}[rightmargin=0cm,leftmargin=4cm]
-	    \noindent\footnotesize{{#1} (\citeauthor{#2}, \citeyear{#2}, #3).}
-    \end{quoting}
+    \begin{citacao}%[rightmargin=0cm,leftmargin=4cm]
+	    \noindent {#1} (\citeauthor{#2}, \citeyear{#2}, #3).
+    \end{citacao}
 }
 %% #1 - Trecho a ser citado
 %% #2 - Chave de referência da obra
 %% #3 - Página +  complementos, tradução/negritos..
 
-\newcommand{\citedirP}[3]{
-    “#1” (\citeauthor{#2}, \citeyear{#2}, #3)
-}
+\newcommand{\citedirP}[3]{ “#1” (\citeauthor{#2}, \citeyear{#2}, #3)}
 %% #1 - Trecho a ser citado
 %% #2 - Chave de referência da obra
 %% #3 - Página +  complementos, tradução/negritos..
@@ -52,11 +55,14 @@
 \newcommand{\citeindir}[1]{(\citeauthor{#1}, \citeyear{#1})}
 %% #1 - Chave de referência da obra
 
+\newcommand{\link}[1]{\href{#1}{#1}. Último acesso em: \today.}
+%% #1 é o link
+
 \titulo{Juventude e(m) Movimento: Uma terapia genealógica da BNCC}
 \autor{Gabriel Nogueira Malta}
 \local{Belo Horizonte}
 \data{2022}
-\orientador{Carolina Tamayo-Osório}
+\orientador{Profa. Dra. Carolina Tamayo Osorio}
 %\coorientador{Equipe \abnTeX}
 \instituicao{%
   Universidade Federal de Minas Gerais
@@ -72,7 +78,7 @@ requisito parcial ao título de mestre .\linebreak
 \newline
 \textbf{Área de concentração}: Educação \newline
 \textbf{Linha de Pesquisa}: Educação Matemática \newline
-\textbf{Orientadora}: Carolina Tamayo-Osório}
+\textbf{Orientadora}: Profa. Dra. Carolina Tamayo Osorio}
 
 
 \hypersetup{
@@ -95,10 +101,15 @@ requisito parcial ao título de mestre .\linebreak
   \pagenumbering{arabic}
 }
 
+\counterwithout*{footnote}{chapter}
+
 \begin{document}
 
 \imprimircapa
 \imprimirfolhaderosto
+
+\subfile{capitulos/resumos.tex}
+
 \subfile{capitulos/sum.tex}
 	
 \pagestyle{bodystyle}
@@ -110,6 +121,6 @@ requisito parcial ao título de mestre .\linebreak
 \subfile{capitulos/cap3.tex}
 
 \citeoption{abnt-full-initials=yes}
-\bibliography{referencias}
+\bibliography{referencias.bib}
 
 \end{document}
