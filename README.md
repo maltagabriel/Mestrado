@@ -7,5 +7,6 @@ Geraldo Pereira de Morais Júnior (geraldo.pmj@gmail.com) havia elaborado uma ad
 
 Além do .sty e do main.tex outros arquivos já participam do projeto: uma pasta com imagens, os arquivos dos capítulos, sumário e o referênicias.bib
 
-Further information about abnTeX2 are available on https://github.com/abntex/abntex2
+Para mais informações a respeito do abnTeX2, visite: https://github.com/abntex/abntex2
 
+Devo também agradecer ao CNPq pelo financiamento da minha pesquisa.
