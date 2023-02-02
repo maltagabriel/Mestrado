@@ -1,4 +1,4 @@
-<h1>Mestrado<\h1>
+<h1>Mestrado</h1>
 
 Por enquanto aqui estão alguns modelos em LaTeX usados para elaboração da dissertação.
 
