@@ -1,5 +1,6 @@
-# Mestrado
-Por enquanto alguns modelos em LaTeX usados para elaboração do projeto de dissertação.
+<h1>Mestrado<\h1>
+
+Por enquanto aqui estão alguns modelos em LaTeX usados para elaboração da dissertação.
 
 O modelo original se encontra em https://www.overleaf.com/latex/templates/modelo-de-dissertacao-ou-tese-ppgan-ufmg/bvkzfvyrcgvx
 
